@@ -1,0 +1,13 @@
+<button onclick="append()">Submit</button>
+<div id="bottom"> line 1 </div>
+
+<script>
+function prepend(){
+    const date = Date.now();
+    const node = document.createElement("div");
+    const textnode = document.createTextNode(date);
+    node.appendChild(textnode);
+    document.getElementById("bottom").prepend(node);
+    window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
